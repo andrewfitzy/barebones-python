@@ -48,3 +48,20 @@ target-version = "py311"
 [tool.ruff.mccabe]
 # Unlike Flake8, default to a complexity level of 10.
 max-complexity = 10
+
+[tool.isort]
+profile = "black"
+line_length = 120
+combine_as_imports = true
+src_paths = ["./src", "./tests"]
+sections = [
+  "FUTURE",
+  "STDLIB",
+  "THIRDPARTY",
+  "FIRSTPARTY",
+  "LOCALFOLDER",
+]
+import_heading_stdlib = "Standard Library"
+import_heading_thirdparty = "Dependencies"
+import_heading_firstparty = "From apps"
+import_heading_localfolder = "Local imports"
